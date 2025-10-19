@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+websockets
+finnhub-python
+pandas
+prophet
+plotly
+boto3
+python-dotenv
+requests
+yfinance
+requests-cache
