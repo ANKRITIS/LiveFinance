@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # Python Backend (FastAPI + Prophet + WebSockets)
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - FINNHUB_API_KEY=YOUR_KEY_HERE  # Optional: Can also set in main.py
+      - AWS_ACCESS_KEY_ID=mock_key
+      - AWS_SECRET_ACCESS_KEY=mock_secret
+
+  # React Frontend (Vite)
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+  # Database (PostgreSQL)
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: livefinance
+    ports:
+      - "5432:5432" # Fixed port (was 5173)
