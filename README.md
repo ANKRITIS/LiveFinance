@@ -14,6 +14,7 @@
 | Component | Technology |
 | :--- | :--- |
 | **Backend** | Python, FastAPI, Uvicorn |
+| **Protocols** | **WebSockets (Real-time)**, **REST API** |
 | **Frontend** | React, Vite, Tailwind CSS, Chart.js |
 | **AI & ML** | Facebook Prophet, Pandas, NumPy |
 | **Data APIs** | **Yahoo Finance (`yfinance`)**, **Finnhub** |
@@ -23,7 +24,7 @@
 
 ## 🚀 Key Features
 
-* **⚡ Real-Time Streaming:** Sub-second stock price updates via WebSockets.
+* **⚡ Real-Time Streaming:** Sub-second stock price updates via **WebSockets**.
 * **🤖 AI Forecasting:** Generates 7-day price trend predictions using the Prophet ML model.
 * **📊 Interactive Charts:** Dynamic, zoomable financial charts for historical analysis.
 * **🐳 Dockerized:** One-command setup for the entire full-stack application.
